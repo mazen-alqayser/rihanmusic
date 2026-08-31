@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="الموقع الرسمي للفنان السوداني ريحان سيكا — نجم الجاز والأفروبيت الأول في جيله. استمع لأبرز أعماله وتعرف على مسيرته.">
+<meta name="keywords" content="ريحان سيكا, فنان سوداني, جاز, أفروبيت, فرع العزازة, هيبة يابنيا, وين باسوب, الفن السوداني">
+<meta name="author" content="مازن القيصر">
+<meta property="og:title" content="ريحان سيكا — نجم الجاز والأفروبيت السوداني">
+<meta property="og:description" content="الموقع الرسمي للفنان ريحان سيكا">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://scontent.fruh4-6.fna.fbcdn.net/v/t39.30808-6/679451246_122155015538974183_1677432897778561689_n.jpg">
+<title>ريحان سيكا — نجم الجاز والأفروبيت السوداني</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#11181A;
+    --night-2:#182223;
+    --sand:#F1E7D6;
+    --sand-dim:#CBBFA9;
+    --amber:#D99A3F;
+    --amber-soft:#E3B36B;
+    --clay:#B5522C;
+    --nile:#3E6E62;
+    --line:rgba(241,231,214,.14);
+    --radius-photo: 6px 28px 6px 28px;
+    --ease: cubic-bezier(.16,.8,.24,1);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Tajawal',sans-serif;
+    background:var(--sand);
+    color:var(--night);
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--amber);color:var(--night);}
+
+  h1,h2,h3,.kufi{
+    font-family:'Reem Kufi',sans-serif;
+    font-weight:700;
+    letter-spacing:0;
+  }
+
+  a{color:inherit;}
+  img{display:block;max-width:100%;}
+  button{font-family:inherit;}
+
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:2rem;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;}
+  }
+
+  :focus-visible{outline:3px solid var(--clay);outline-offset:3px;}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:fixed;inset-inline:0;top:0;z-index:1000;
+    background:rgba(17,24,26,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(241,231,214,.1);
+  }
+  .nav-row{
+    max-width:1180px;margin:0 auto;padding:1.1rem 2rem;
+    display:flex;align-items:center;justify-content:space-between;
+    color:var(--sand);
+  }
+  .brand{
+    display:flex;align-items:center;gap:.6rem;
+    font-family:'Reem Kufi',sans-serif;font-size:1.25rem;color:var(--sand);
+    text-decoration:none;cursor:pointer;background:none;border:none;
+  }
+  .brand-mark{width:26px;height:26px;flex:none;}
+  .nav-links{list-style:none;display:flex;align-items:center;gap:2.1rem;}
+  .nav-links a{
+    color:var(--sand-dim);text-decoration:none;font-size:.94rem;font-weight:500;
+    position:relative;padding-bottom:4px;
+  }
+  .nav-links a:hover{color:var(--sand);}
+  .nav-right{display:flex;align-items:center;gap:1rem;}
+  .nav-cta{
+    background:transparent;border:1px solid var(--amber);color:var(--amber-soft);
+    padding:.55rem 1.3rem;border-radius:2px;font-weight:700;
+    font-size:.9rem;cursor:pointer;transition:background .25s var(--ease),color .25s var(--ease);
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--amber);color:var(--night);}
+  .nav-toggle{display:none;}
+
+  @media (max-width:840px){
+    .nav-links{position:fixed;inset-inline:0;top:64px;background:var(--night);
+      flex-direction:column;align-items:flex-start;gap:0;padding:0 2rem;
+      max-height:0;overflow:hidden;transition:max-height .35s var(--ease);border-bottom:1px solid var(--line);}
+    .nav-links.open{max-height:340px;padding:1rem 2rem 1.6rem;}
+    .nav-links li{width:100%;border-bottom:1px solid var(--line);}
+    .nav-links a{display:block;padding:.9rem 0;}
+    .nav-right .nav-cta{display:none;}
+    .nav-toggle{
+      display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;
+    }
+    .nav-toggle span{width:22px;height:2px;background:var(--sand);display:block;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;background:var(--night);color:var(--sand);padding-top:64px;overflow:hidden;}
+  .hero::before{
+    content:'';position:absolute;inset:0;
+    background-image:radial-gradient(rgba(217,154,63,.16) 1px, transparent 1px);
+    background-size:26px 26px;
+    -webkit-mask-image:radial-gradient(circle at 78% 30%, black, transparent 65%);
+    mask-image:radial-gradient(circle at 78% 30%, black, transparent 65%);
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;max-width:1180px;margin:0 auto;padding:2rem;
+    display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;
+    min-height:calc(100vh - 64px);
+  }
+  .hero-eyebrow{color:var(--amber-soft);font-size:.95rem;font-weight:700;margin-bottom:1.1rem;}
+  .hero h1{font-size:clamp(3rem,7vw,5.4rem);line-height:.98;color:var(--sand);margin-bottom:1.2rem;}
+  .hero-lede{font-size:1.15rem;color:var(--sand-dim);max-width:48ch;margin-bottom:2.2rem;}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem;}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.9rem 1.9rem;border-radius:2px;font-weight:700;font-size:.95rem;
+    text-decoration:none;cursor:pointer;border:1px solid transparent;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);
+  }
+  .btn-solid{background:var(--amber);color:var(--night);}
+  .btn-solid:hover{background:var(--amber-soft);transform:translateY(-2px);}
+  .btn-line{border-color:var(--sand-dim);color:var(--sand);}
+  .btn-line:hover{border-color:var(--sand);background:rgba(241,231,214,.06);}
+
+  .eq{display:flex;align-items:flex-end;gap:5px;height:34px;}
+  .eq span{width:4px;background:var(--amber);border-radius:1px;animation:eq 1.4s ease-in-out infinite;}
+  .eq span:nth-child(1){height:40%;animation-delay:-1.2s;}
+  .eq span:nth-child(2){height:100%;animation-delay:-.9s;}
+  .eq span:nth-child(3){height:60%;animation-delay:-.6s;}
+  .eq span:nth-child(4){height:85%;animation-delay:-.3s;}
+  .eq span:nth-child(5){height:50%;animation-delay:0s;}
+  @keyframes eq{0%,100%{transform:scaleY(.4);}50%{transform:scaleY(1);}}
+  @media (prefers-reduced-motion: reduce){ .eq span{animation:none;height:70%;} }
+
+  .hero-photo{position:relative;}
+  .hero-photo img{
+    width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;
+    border-radius:var(--radius-photo);filter:saturate(1.05);
+    box-shadow:0 30px 70px rgba(0,0,0,.45);
+  }
+  .hero-photo::after{
+    content:'';position:absolute;inset:-16px -16px auto auto;
+    width:120px;height:120px;border:1px solid var(--amber);border-radius:50%;opacity:.5;z-index:-1;
+  }
+  .hero-tag{
+    position:absolute;bottom:-18px;right:-14px;background:var(--clay);color:var(--sand);
+    padding:.7rem 1.2rem;border-radius:2px;font-family:'Reem Kufi';font-size:.9rem;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+  }
+  .horizon{position:absolute;bottom:0;inset-inline:0;height:120px;
+    background:linear-gradient(180deg,transparent,rgba(217,154,63,.08));pointer-events:none;}
+
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;text-align:right;padding-top:2.4rem;min-height:auto;}
+    .hero-photo{order:-1;max-width:280px;margin-inline-start:auto;margin-inline-end:auto;}
+    .hero-tag{right:0;}
+  }
+
+  /* ---------- Ticker ---------- */
+  .ticker{background:var(--clay);color:var(--sand);overflow:hidden;
+    border-top:1px solid rgba(0,0,0,.15);border-bottom:1px solid rgba(0,0,0,.15);}
+  .ticker-track{display:flex;white-space:nowrap;width:max-content;animation:ticker 30s linear infinite;padding:.7rem 0;}
+  .ticker-track span{font-family:'Reem Kufi';font-size:1rem;padding-inline:1.6rem;display:flex;align-items:center;gap:1.6rem;}
+  @keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion: reduce){ .ticker-track{animation:none;} }
+
+  /* ---------- Section shell ---------- */
+  section{padding:6.5rem 0;}
+  .kicker{color:var(--clay);font-weight:700;font-size:.95rem;margin-bottom:.6rem;}
+  .h2{font-size:clamp(2rem,4vw,2.7rem);margin-bottom:2.6rem;max-width:22ch;}
+
+  /* ---------- About ---------- */
+  .about{background:var(--sand);}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:4rem;align-items:start;}
+  .about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:var(--radius-photo);}
+  .about-text p{color:#3a3530;max-width:58ch;margin-bottom:1.3rem;font-size:1.03rem;}
+  .facts{margin-top:2.2rem;border-top:1px solid rgba(17,24,26,.12);}
+  .fact{display:grid;grid-template-columns:9ch 1fr;gap:1.4rem;padding:1.1rem 0;border-bottom:1px solid rgba(17,24,26,.12);}
+  .fact dt{font-family:'Reem Kufi';color:var(--clay);font-size:.95rem;}
+  .fact dd{color:#3a3530;font-size:.98rem;}
+
+  @media (max-width:840px){
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{max-width:320px;}
+    .fact{grid-template-columns:1fr;gap:.2rem;}
+  }
+
+  /* ---------- Pull quote ---------- */
+  .pull{background:var(--night);color:var(--sand);position:relative;padding:5.5rem 0;}
+  .pull-mark{font-family:'Reem Kufi';font-size:5rem;color:var(--amber);line-height:1;opacity:.5;}
+  .pull p{
+    font-family:'Reem Kufi';font-size:clamp(1.5rem,3.4vw,2.5rem);line-height:1.5;max-width:22ch;color:var(--sand);
+  }
+  .pull cite{display:block;margin-top:1.6rem;font-style:normal;color:var(--sand-dim);font-size:1rem;}
+
+  /* ---------- Stats strip ---------- */
+  .stats-strip{background:var(--night-2);color:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stats-row{display:flex;flex-wrap:wrap;}
+  .stat{flex:1 1 200px;padding:2.4rem 2rem;text-align:center;border-inline-start:1px solid var(--line);}
+  .stat:first-child{border-inline-start:none;}
+  .stat b{display:block;font-family:'Reem Kufi';font-size:2.3rem;color:var(--amber-soft);margin-bottom:.3rem;}
+  .stat span{color:var(--sand-dim);font-size:.92rem;}
+  @media (max-width:600px){ .stat{border-inline-start:none;border-top:1px solid var(--line);} .stat:first-child{border-top:none;} }
+
+  /* ---------- Videos ---------- */
+  .videos{background:#161F21;color:var(--sand);}
+  .videos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-bottom:1rem;}
+  .video-card{background:rgba(241,231,214,.03);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .video-frame{position:relative;aspect-ratio:16/9;background:#000;}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .video-body{padding:1.3rem 1.4rem 1.6rem;}
+  .video-body h3{font-size:1.15rem;margin-bottom:.4rem;color:var(--sand);}
+  .video-body p{font-size:.9rem;color:var(--sand-dim);}
+  .video-badge{
+    display:inline-block;font-size:.75rem;color:var(--amber-soft);border:1px solid var(--amber);
+    padding:.15rem .6rem;border-radius:20px;margin-bottom:.6rem;
+  }
+  @media (max-width:980px){ .videos-grid{grid-template-columns:1fr;} }
+
+  /* ---------- Gallery ---------- */
+  .gallery{background:var(--sand);}
+  .masonry{columns:3 220px;column-gap:1.1rem;}
+  .masonry figure{break-inside:avoid;margin:0 0 1.1rem;border-radius:4px;overflow:hidden;position:relative;cursor:pointer;}
+  .masonry img{width:100%;display:block;transition:transform .5s var(--ease);}
+  .masonry figure:hover img{transform:scale(1.04);}
+  .masonry figcaption{
+    position:absolute;inset-inline:0;bottom:0;padding:.9rem 1rem;
+    background:linear-gradient(0deg,rgba(0,0,0,.75),transparent);
+    font-size:.85rem;color:#fff;opacity:0;transition:opacity .3s;
+  }
+  .masonry figure:hover figcaption{opacity:1;}
+  @media (max-width:600px){ .masonry{columns:2 150px;} }
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--sand-2,#EBE0CC);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+  .contact-lede p{color:#3a3530;max-width:44ch;margin-bottom:2rem;font-size:1.03rem;}
+  .contact-note{border-inline-start:3px solid var(--nile);padding-inline-start:1rem;color:#3a3530;font-size:.95rem;max-width:42ch;}
+  .contact-panel{background:var(--night);color:var(--sand);padding:2.6rem;border-radius:4px;}
+  .contact-panel .row{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-bottom:1px solid var(--line);}
+  .contact-panel .row:last-of-type{border-bottom:none;}
+  .contact-panel .label{color:var(--sand-dim);font-size:.9rem;}
+  .contact-panel .value{font-weight:700;}
+  .contact-panel .btn{width:100%;justify-content:center;margin-top:1.6rem;}
+  @media (max-width:840px){ .contact-grid{grid-template-columns:1fr;} }
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--night);color:var(--sand-dim);padding:3.2rem 0 2rem;}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-bottom:2rem;border-bottom:1px solid var(--line);}
+  .footer-links{display:flex;gap:1.6rem;list-style:none;flex-wrap:wrap;}
+  .footer-links a{text-decoration:none;color:var(--sand-dim);font-size:.9rem;}
+  .footer-links a:hover{color:var(--amber-soft);}
+  .socials{display:flex;gap:.8rem;}
+  .socials a{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--sand-dim);font-size:.9rem;}
+  .socials a:hover{border-color:var(--amber);color:var(--amber-soft);}
+  .footer-bottom{padding-top:1.6rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;font-size:.85rem;}
+  .footer-bottom a{color:var(--amber-soft);text-decoration:none;}
+  .footer-bottom a:hover{text-decoration:underline;}
+
+  /* ---------- Floating actions (WhatsApp + to-top) ---------- */
+  .float-stack{
+    position:fixed;bottom:22px;right:22px;z-index:999;
+    display:flex;flex-direction:column;align-items:flex-end;gap:.7rem;
+  }
+  .to-top{
+    width:42px;height:42px;border-radius:50%;background:var(--night);color:var(--amber-soft);
+    border:1px solid var(--amber);display:flex;align-items:center;justify-content:center;
+    cursor:pointer;opacity:0;visibility:hidden;transform:translateY(6px);
+    transition:all .3s var(--ease);font-size:1.1rem;
+  }
+  .to-top.show{opacity:1;visibility:visible;transform:translateY(0);}
+
+  .wa-widget{position:relative;}
+  .wa-menu{
+    position:absolute;bottom:calc(100% + 12px);left:0;
+    background:var(--sand);border-radius:8px;box-shadow:0 20px 50px rgba(0,0,0,.3);
+    overflow:hidden;max-height:0;opacity:0;transform:translateY(8px);
+    transition:all .3s var(--ease);width:260px;pointer-events:none;
+  }
+  .wa-menu.active{max-height:420px;opacity:1;transform:translateY(0);pointer-events:auto;}
+  .wa-menu-head{padding:.9rem 1.1rem;background:var(--nile);color:#fff;font-size:.85rem;font-weight:700;}
+  .wa-item{padding:.9rem 1.1rem;border-bottom:1px solid rgba(17,24,26,.1);cursor:pointer;transition:background .2s;}
+  .wa-item:hover{background:rgba(217,154,63,.12);}
+  .wa-item:last-child{border-bottom:none;}
+  .wa-item-title{font-weight:700;font-size:.9rem;margin-bottom:.15rem;}
+  .wa-item-desc{font-size:.78rem;color:#6b6459;}
+  .wa-main{
+    width:60px;height:60px;border-radius:50%;background:var(--nile);color:#fff;
+    display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;
+    font-size:1.6rem;box-shadow:0 12px 30px rgba(62,110,98,.45);
+    transition:transform .25s var(--ease);position:relative;
+  }
+  .wa-main::before{
+    content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(62,110,98,.4);
+    animation:pulseRing 2.4s ease-out infinite;
+  }
+  @keyframes pulseRing{0%{transform:scale(.9);opacity:.8;}100%{transform:scale(1.4);opacity:0;}}
+  @media (prefers-reduced-motion: reduce){ .wa-main::before{animation:none;display:none;} }
+  .wa-main:hover{transform:scale(1.06);}
+
+  @media (max-width:600px){
+    .float-stack{bottom:16px;right:16px;}
+    .wa-main{width:54px;height:54px;font-size:1.4rem;}
+    .wa-menu{width:230px;left:auto;right:0;}
+  }
+
+  @media print{ nav,.float-stack{display:none;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-row">
+    <button class="brand" onclick="scrollToTop()">
+      <svg class="brand-mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="13" cy="13" r="12" stroke="#D99A3F" stroke-width="1.4"/>
+        <path d="M8 17V9l7-1.5v9" stroke="#D99A3F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="8" cy="17" r="2" stroke="#D99A3F" stroke-width="1.4"/>
+        <circle cx="15" cy="15.5" r="2" stroke="#D99A3F" stroke-width="1.4"/>
+      </svg>
+      ريحان سيكا
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">الرئيسية</a></li>
+      <li><a href="#about">عن الفنان</a></li>
+      <li><a href="#videos">الأعمال</a></li>
+      <li><a href="#gallery">المعرض</a></li>
+      <li><a href="#contact">التواصل</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-cta" onclick="openWaMenu()">حجز واستفسار</button>
+      <button class="nav-toggle" id="navToggle" aria-label="القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= Hero ================= -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">نجم الجاز والأفروبيت الأول في جيله</div>
+      <h1>ريحان<br>سيكا</h1>
+      <p class="hero-lede">
+        صوت سوداني وُلد في جنيف عام 1990، وصعد خلال سنوات قليلة ليصبح الاسم الذي يتصدّره الشباب
+        السوداني في كل قائمة تشغيل: جاز بمزاج أوروبي، وأفروبيت بنبض أفريقي، ولحن سوداني خالص يجمع الاثنين
+        في هوية لا تشبه أحداً غيره.
+      </p>
+      <div class="hero-actions">
+        <a href="#videos" class="btn btn-solid">شاهد أبرز أعماله</a>
+        <a href="#contact" class="btn btn-line">تواصل معي</a>
+      </div>
+      <div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://scontent.fruh4-6.fna.fbcdn.net/v/t39.30808-6/679451246_122155015538974183_1677432897778561689_n.jpg" alt="ريحان سيكا">
+      <div class="hero-tag">نجم جيل كامل</div>
+    </div>
+  </div>
+  <div class="horizon"></div>
+</section>
+
+<!-- ================= Ticker ================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>نجم الجيل ◆ جاز سوداني ◆ أفروبيت ◆ فرع العزازة ◆ هيبة يابنيا ◆ وين باسوب ◆ حفلات حية ◆ موسيقى السودان</span>
+    <span>نجم الجيل ◆ جاز سوداني ◆ أفروبيت ◆ فرع العزازة ◆ هيبة يابنيا ◆ وين باسوب ◆ حفلات حية ◆ موسيقى السودان</span>
+  </div>
+</div>
+
+<!-- ================= About ================= -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="https://up.yimg.com/ib/th/id/OIP.7xA0Vj83GXKi_2xlkoLiWAHaEK?pid=Api&rs=1&c=1&qlt=95&w=195&h=109" alt="ريحان سيكا في الاستوديو">
+      </div>
+      <div class="about-text">
+        <div class="kicker">السيرة</div>
+        <h2 class="h2">من جنيف إلى قلب كل بيت سوداني</h2>
+        <p>
+          وُلد ريحان في جنيف، وترعرع بين إيقاع مدينة أوروبية هادئة وذاكرة سودانية ورثها من بيته.
+          لم تكن المسافة يوماً سبباً للانفصال؛ بل صارت المادة الخام التي صاغ منها أسلوبه: جاز غربي
+          البنية، بروح أفريقية في الإيقاع، ونكهة سودانية في كل تفصيلة.
+        </p>
+        <p>
+          في زمن قياسي تحوّل ريحان من صوت واعد إلى الاسم الذي يتردد في كل حفلة وكل سيارة أجرة وكل
+          تجمّع شبابي — لم يعد فناناً يُستمع إليه فحسب، بل صار مرجعاً لجيل كامل يبحث عن هوية موسيقية
+          تشبهه: حديثة الشكل، سودانية الجذر.
+        </p>
+        <p>
+          يكتب ويلحّن أعماله بنفسه غالباً، ويحرص أن يحمل كل عمل رسالة واضحة عن وحدة البلد وسلامه،
+          إلى جانب دعمه المعلن للقوات المسلحة السودانية في أعمال وطنية صريحة لاقت صدى واسعاً.
+        </p>
+        <dl class="facts">
+          <div class="fact"><dt>مواليد</dt><dd>1990 — جنيف، سويسرا</dd></div>
+          <div class="fact"><dt>الأسلوب</dt><dd>جاز وأفروبيت بنكهة سودانية أصيلة</dd></div>
+          <div class="fact"><dt>المكانة</dt><dd>من أكثر الأصوات الشابة تأثيراً في المشهد السوداني الحالي</dd></div>
+          <div class="fact"><dt>الرسالة</dt><dd>وحدة البلاد والسلام، ودعم القوات المسلحة السودانية</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Pull quote ================= -->
+<section class="pull">
+  <div class="wrap">
+    <span class="pull-mark">"</span>
+    <p>جيل كامل وجد في صوت ريحان سيكا اللغة التي كان يبحث عنها ليعبّر عن نفسه.</p>
+    <cite>— من الوسط الفني السوداني</cite>
+  </div>
+</section>
+
+<!-- ================= Stats ================= -->
+<section class="stats-strip" style="padding:0;">
+  <div class="stats-row wrap">
+    <div class="stat"><b>10+</b><span>أغنية منشورة</span></div>
+    <div class="stat"><b>100K+</b><span>متابع عبر المنصات</span></div>
+    <div class="stat"><b>15+</b><span>سنة في الموسيقى</span></div>
+    <div class="stat"><b>8+</b><span>تكريم وجائزة</span></div>
+  </div>
+</section>
+
+<!-- ================= Videos ================= -->
+<section class="videos" id="videos">
+  <div class="wrap">
+    <div class="kicker">أبرز الأعمال</div>
+    <h2 class="h2">الأغاني التي صنعت اسم ريحان سيكا</h2>
+
+    <div class="videos-grid">
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/1L1IruC8YLg" title="وين باسوب — ريحان سيكا" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-body">
+          <span class="video-badge">الأكثر تداولاً</span>
+          <h3>وين باسوب</h3>
+          <p>"بنت عمك تلقاها وين باسوب" — سطر واحد كفى ليتحوّل إلى ترند يردده الجميع، وأغنية تختصر خفة أسلوب ريحان وقدرته على صناعة اللحظة الشعبية.</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/hVeyRDjyu6k" title="فرع العزازة — ريحان سيكا" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-body">
+          <span class="video-badge">أحدث إصدار</span>
+          <h3>فرع العزازة</h3>
+          <p>إنتاج عصري وإيقاع أفروبيت لاصق، تجربة تُظهر كيف يعيد ريحان تشكيل الأغنية السودانية الشبابية بلمسة معاصرة دون أن يفقدها هويتها.</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/9aLe9zAs3Ts" title="هيبة يابنيا — القوات المشتركة" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-body">
+          <span class="video-badge">عمل وطني</span>
+          <h3>هيبة يابنيا</h3>
+          <p>من أبرز الأعمال الوطنية في مسيرته — عمل مشترك يحمل صوت الجيش والشارع السوداني معاً، ويؤكد التزام ريحان برسالته تجاه بلده.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Gallery ================= -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="kicker">المعرض</div>
+    <h2 class="h2">لحظات من المسرح والاستوديو</h2>
+
+    <div class="masonry">
+      <figure onclick="window.open(this.querySelector('img').src,'_blank')">
+        <img src="https://scontent.fruh4-6.fna.fbcdn.net/v/t39.30808-6/679451246_122155015538974183_1677432897778561689_n.jpg" alt="ريحان سيكا">
+        <figcaption>ريحان سيكا</figcaption>
+      </figure>
+      <figure onclick="window.open(this.querySelector('img').src,'_blank')">
+        <img src="https://i.ytimg.com/vi/hVeyRDjyu6k/maxresdefault.jpg" alt="فرع العزازة">
+        <figcaption>فرع العزازة</figcaption>
+      </figure>
+      <figure onclick="window.open(this.querySelector('img').src,'_blank')">
+        <img src="https://i.ytimg.com/vi/9aLe9zAs3Ts/maxresdefault.jpg" alt="هيبة يابنيا">
+        <figcaption>هيبة يابنيا</figcaption>
+      </figure>
+      <figure onclick="window.open(this.querySelector('img').src,'_blank')">
+        <img src="https://i.ytimg.com/vi/1L1IruC8YLg/maxresdefault.jpg" alt="وين باسوب">
+        <figcaption>وين باسوب</figcaption>
+      </figure>
+      <figure onclick="window.open(this.querySelector('img').src,'_blank')">
+        <img src="https://up.yimg.com/ib/th/id/OIP.7xA0Vj83GXKi_2xlkoLiWAHaEK?pid=Api&rs=1&c=1&qlt=95&w=195&h=109" alt="جلسة تسجيل">
+        <figcaption>جلسة تسجيل</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Contact ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-lede">
+        <div class="kicker">التواصل</div>
+        <h2 class="h2" style="margin-bottom:1.2rem;">للحجوزات والتعاون الفني</h2>
+        <p>افتح خطاً مباشراً للحديث عن حفلة، تعاون، أو أي فكرة فنية. الرد يصلك سريعاً عبر واتساب أو هاتفياً.</p>
+        <p class="contact-note">
+          لا يحمل الفنان أي خلافات مع زملائه في الوسط الفني، ويوجّه تحيته لكل السودانيين أينما كانوا.
+        </p>
+      </div>
+      <div class="contact-panel">
+        <div class="row"><span class="label">الهاتف</span><span class="value" dir="ltr">+249 911 912 9429</span></div>
+        <div class="row"><span class="label">الواتساب</span><span class="value">متاح للرد المباشر</span></div>
+        <div class="row"><span class="label">الموقع</span><span class="value">السودان</span></div>
+        <a class="btn btn-solid" href="https://wa.me/2499119129429?text=مرحباً%20الفنان%20ريحان%20سيكا%20أود%20الاستفسار%20عنك" target="_blank">تواصل عبر واتساب</a>
+        <a class="btn btn-line" href="tel:+2499119129429" style="margin-top:.8rem;">اتصال هاتفي مباشر</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Footer ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <ul class="footer-links">
+        <li><a href="#hero">الرئيسية</a></li>
+        <li><a href="#about">عن الفنان</a></li>
+        <li><a href="#videos">الأعمال</a></li>
+        <li><a href="#gallery">المعرض</a></li>
+        <li><a href="#contact">التواصل</a></li>
+      </ul>
+      <div class="socials">
+        <a href="https://www.youtube.com/results?search_query=riyan+sika" target="_blank" aria-label="يوتيوب">▶</a>
+        <a href="https://wa.me/2499119129429" target="_blank" aria-label="واتساب">W</a>
+        <a href="https://www.facebook.com/profile.php/?id=61579225497410" target="_blank" aria-label="فيسبوك">f</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="copyrightText">© 2024 جميع الحقوق محفوظة لريحان سيكا</span>
+      <span>تطوير <a href="https://mazenalqaysercv.vercel.app/" target="_blank">مازن القيصر</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= Floating actions ================= -->
+<div class="float-stack">
+  <button class="to-top" id="toTop" onclick="scrollToTop()" aria-label="العودة للأعلى">⬆</button>
+  <div class="wa-widget">
+    <div class="wa-menu" id="waMenu">
+      <div class="wa-menu-head">كيف نقدر نساعدك؟</div>
+      <div class="wa-item" onclick="sendWa('أود الاستفسار عن الحجوزات والعروض الفنية')">
+        <div class="wa-item-title">حجز عرض</div>
+        <div class="wa-item-desc">استفسر عن الحجوزات</div>
+      </div>
+      <div class="wa-item" onclick="sendWa('أود التواصل معك بخصوص تعاون فني')">
+        <div class="wa-item-title">تعاون فني</div>
+        <div class="wa-item-desc">اقترح تعاوناً أو مشروعاً</div>
+      </div>
+      <div class="wa-item" onclick="sendWa('أود معرفة المزيد عن أغانيك وأعمالك')">
+        <div class="wa-item-title">استفسار عام</div>
+        <div class="wa-item-desc">اسأل عن أي شيء</div>
+      </div>
+      <div class="wa-item" onclick="sendWa('أود إرسال رسالة شخصية')">
+        <div class="wa-item-title">رسالة شخصية</div>
+        <div class="wa-item-desc">أرسل رسالة خاصة</div>
+      </div>
+    </div>
+    <button class="wa-main" onclick="toggleMenu()" aria-label="فتح قائمة واتساب" aria-expanded="false">💬</button>
+  </div>
+</div>
+
+<script>
+  function toggleMenu(){
+    const menu = document.getElementById('waMenu');
+    const isOpen = menu.classList.toggle('active');
+    document.querySelector('.wa-main').setAttribute('aria-expanded', isOpen);
+  }
+  function openWaMenu(){
+    const menu = document.getElementById('waMenu');
+    menu.classList.add('active');
+    document.querySelector('.wa-main').setAttribute('aria-expanded','true');
+    document.querySelector('.wa-widget').scrollIntoView({behavior:'smooth', block:'center'});
+  }
+  function sendWa(msg){
+    window.open(`https://wa.me/2499119129429?text=${encodeURIComponent(msg)}`, '_blank');
+    document.getElementById('waMenu').classList.remove('active');
+  }
+  document.addEventListener('click', e=>{
+    const widget = document.querySelector('.wa-widget');
+    if(!widget.contains(e.target)) document.getElementById('waMenu').classList.remove('active');
+  });
+
+  function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', ()=>{
+    toTop.classList.toggle('show', window.scrollY > 500);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const href = a.getAttribute('href');
+      if(href!=='#' && document.querySelector(href)){
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({behavior:'smooth'});
+        document.getElementById('navLinks').classList.remove('open');
+      }
+    });
+  });
+
+  const navToggle = document.getElementById('navToggle');
+  navToggle.addEventListener('click', ()=>{
+    const links = document.getElementById('navLinks');
+    const isOpen = links.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  document.getElementById('copyrightText').textContent =
+    `© ${new Date().getFullYear()} جميع الحقوق محفوظة لريحان سيكا`;
+
+  document.addEventListener('DOMContentLoaded', ()=>{
+    document.querySelectorAll('img').forEach(img=>{ if(!img.alt) img.alt = 'صورة من أعمال الفنان ريحان سيكا'; });
+    const schema = {
+      "@context":"https://schema.org","@type":"Person","name":"ريحان سيكا",
+      "jobTitle":"فنان موسيقي","birthDate":"1990","birthPlace":"جنيف، سويسرا",
+      "nationality":"سوداني","url":window.location.href,"telephone":"+2499119129429",
+      "sameAs":["https://www.facebook.com/profile.php/?id=61579225497410"]
+    };
+    const s = document.createElement('script');
+    s.type = 'application/ld+json'; s.textContent = JSON.stringify(schema);
+    document.head.appendChild(s);
+  });
+</script>
+</body>
+</html>
